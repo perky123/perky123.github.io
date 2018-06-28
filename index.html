@@ -6,17 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>Perky</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+  <meta name="description" content="皮的不行的搬砖的">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Perky">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="Perky">
+<meta property="og:description" content="皮的不行的搬砖的">
 <meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="Perky">
+<meta name="twitter:description" content="皮的不行的搬砖的">
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Perky" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -43,10 +46,10 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="/img/IMG_3258.JPG" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">John Doe</a></h1>
+		  <h1 class="header-author"><a href="/">Perky</a></h1>
 		</hgroup>
 		
 
@@ -77,13 +80,7 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-		        
-					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-		        
-					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+					<a class="github" target="_blank" href="https://github.com/perky123" title="github"><i class="icon-github"></i></a>
 		        
 			</div>
 		</nav>
@@ -101,10 +98,10 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="/img/IMG_3258.JPG" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">John Doe</h1>
+			  <h1 class="header-author js-header-author">Perky</h1>
 			</hgroup>
 			
 			
@@ -118,13 +115,7 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-			        
-						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+						<a class="github" target="_blank" href="https://github.com/perky123" title="github"><i class="icon-github"></i></a>
 			        
 				</div>
 			</nav>
@@ -173,12 +164,16 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><ul>
-<li>测试单个用例: rake test TEST=test/unit/</li>
-<li>复制development 数据表到test: db:test:clone_structure<h3 id="Redis-in-Rails-Gem-redis-rails"><a href="#Redis-in-Rails-Gem-redis-rails" class="headerlink" title="Redis in Rails(Gem redis-rails)"></a>Redis in Rails(Gem redis-rails)</h3></li>
+<li><p>测试单个用例: </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rake <span class="built_in">test</span> TEST=<span class="built_in">test</span>/unit/</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>复制development 数据表到test: </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db:<span class="built_in">test</span>:clone_structure</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># config/application.rb</span><br><span class="line">config.cache_store = :redis_store, <span class="string">"redis://localhost:6379/0/cache"</span>, &#123; <span class="attr">expires_in</span>: <span class="number">90.</span>minutes &#125;</span><br><span class="line"></span><br><span class="line"># config/initializers/session_store.rb</span><br><span class="line">MyApplication::Application.config.session_store :redis_store, <span class="attr">servers</span>: [<span class="string">"redis://localhost:6379/0/session"</span>]</span><br></pre></td></tr></table></figure>
-<h4 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h4><ul>
-<li><p>Redis Hash $redis.hset(‘user_city’, user_id, city_id)  $redis.hgetall(‘user_city’)</p>
+<h3 id="Redis-in-Rails-Gem-redis-rails"><a href="#Redis-in-Rails-Gem-redis-rails" class="headerlink" title="Redis in Rails(Gem redis-rails)"></a>Redis in Rails(Gem redis-rails)</h3><h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># config/application.rb</span><br><span class="line">config.cache_store = :redis_store, <span class="string">"redis://localhost:6379/0/cache"</span>, &#123; <span class="attr">expires_in</span>: <span class="number">90.</span>minutes &#125;</span><br><span class="line"></span><br><span class="line"># config/initializers/session_store.rb</span><br><span class="line">MyApplication::Application.config.session_store :redis_store, <span class="attr">servers</span>: [<span class="string">"redis://localhost:6379/0/session"</span>]</span><br></pre></td></tr></table></figure>
+<h4 id="Rails方法"><a href="#Rails方法" class="headerlink" title="Rails方法"></a>Rails方法</h4><ul>
+<li><p>Redis Hash</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; $redis.hset(<span class="string">'user_city'</span>, <span class="number">1</span>, <span class="number">10</span>)</span><br><span class="line">=&gt; <span class="literal">true</span></span><br><span class="line">&gt; $redis.hset(<span class="string">'user_city'</span>, <span class="number">2</span>, <span class="number">20</span>)</span><br><span class="line">=&gt; <span class="literal">true</span></span><br><span class="line">&gt; $redis.hgetall(<span class="string">'user_city'</span>)</span><br><span class="line">=&gt; &#123;<span class="string">"1"</span>=&gt;<span class="string">"10"</span>, <span class="string">"2"</span>=&gt;<span class="string">"20"</span>&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Redis Set</p>
@@ -186,28 +181,58 @@
 </li>
 </ul>
 <h4 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h4><ul>
-<li>启动redis: redis-server</li>
-<li>测试连接是否正常: redis-cli</li>
+<li><p>启动redis: </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-server</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>测试连接是否正常: </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-cli</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 <h3 id="Mac系统命令"><a href="#Mac系统命令" class="headerlink" title="Mac系统命令"></a>Mac系统命令</h3><ul>
-<li>查看出口ip: curl ifconfig.me</li>
-<li>查看端口占用情况: lsof -i :端口号</li>
-<li>远程复制到本地:<br>scp <a href="mailto:root@10.6.159.147" target="_blank" rel="noopener">root@10.6.159.147</a>:/opt/soft/demo.tar /opt/soft/<br>scp deploy@r6:/tmp/20171024_image_collection.xls /tmp/</li>
-<li>本地复制到远程:<br>scp local_file remote_username@remote_ip:remote_folder</li>
-<li>后台任务(nohup):<br>RAILS_ENV=production bundle exec nohup rake push_ctrip_special:price &amp;</li>
+<li><p>查看出口ip: </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl ifconfig.me</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看端口占用情况: </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsof -i :6350</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>远程复制到本地:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scp root@10.6.159.147:/opt/soft/demo.tar /opt/soft/</span><br><span class="line">scp deploy@r6:/tmp/20171024_image_collection.xls /tmp/</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>本地复制到远程:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp local_file remote_username@remote_ip:remote_folder</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>后台任务(nohup):</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">RAILS_ENV=production bundle <span class="built_in">exec</span> nohup rake push_ctrip_special:price &amp;</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 <h3 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h3><ul>
-<li>查看docker下所有容器: docker ps -a</li>
-<li>查看容器日志: docker logs -f container_id</li>
-<li>查看实时日志: docker logs -f -t –since=”2018-06-28” <container id=""></container></li>
-<li>查看端口绑定情况: docker port adoring_stonebraker 5002</li>
-<li>docker run -d -p 127.0.0.1:5001:5002/udp training/webapp python app.py  我们就可以通过访问127.0.0.1:5001来访问容器的5002的udp端口</li>
-<li>登陆docker容器: docker exec -it <container id=""> bash</container></li>
-<li>docker访问终端: docker exec -it 47d08ed9c458 bundle exec rails c</li>
-<li>docker容器内拷贝至容器外: docker cp <container id="">:/tmp/excel/416185/newcities.xlsx /tmp/</container></li>
+<li><p>查看docker下所有容器: </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps -a</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看容器日志: </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker logs -f container_id</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看实时日志: </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker logs -f -t --since=<span class="string">"2018-06-28"</span> &lt;CONTAINER ID&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看端口绑定情况: </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker port adoring_stonebraker 5002</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>docker run -d -p 127.0.0.1:5001:5002/udp training/webapp python app.py  我们就可以通过访问127.0.0.1:5001来访问容器的5002的udp端口</p>
+</li>
+<li><p>登陆docker容器: </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it &lt;CONTAINER ID&gt; bash</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>docker访问终端: </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it 47d08ed9c458 bundle <span class="built_in">exec</span> rails c</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>docker容器内拷贝至容器外: </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker cp &lt;CONTAINER ID&gt;:/tmp/excel/416185/newcities.xlsx /tmp/</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 <h3 id="Mysql"><a href="#Mysql" class="headerlink" title="Mysql"></a>Mysql</h3><ul>
-<li>导出数据库表及数据: mysqldump -uroot -pperky123  user_center_development &gt; ~/Desktop/user_center_development.sql</li>
+<li>导出数据库表及数据: <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqldump -uroot -pperky123  user_center_development &gt; ~/Desktop/user_center_development.sql</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 <h3 id="Ruby"><a href="#Ruby" class="headerlink" title="Ruby"></a>Ruby</h3><ul>
 <li>try(:a) == &amp;:a</li>
@@ -218,26 +243,34 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; m = User.method(:last)</span><br><span class="line"> =&gt; #&lt;Method: Class(ActiveRecord::Querying)#last&gt;</span><br><span class="line">&gt; m.source_location</span><br><span class="line"> =&gt; [<span class="string">"/opt/work/batman/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.2/lib/active_record/querying.rb"</span>, <span class="number">3</span>]</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>string转class,class取module，class转string…</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">self</span><br><span class="line">=&gt; ChannelStockService::Base</span><br><span class="line">[<span class="number">2</span>] pry(ChannelStockService::Base)&gt; self.name</span><br><span class="line">=&gt; <span class="string">"ChannelStockService::Base"</span></span><br><span class="line">[<span class="number">3</span>] pry(ChannelStockService::Base)&gt; self.name.deconstantize</span><br><span class="line">=&gt; <span class="string">"ChannelStockService"</span></span><br><span class="line">[<span class="number">4</span>] pry(ChannelStockService::Base)&gt; self.name.constantize</span><br><span class="line">=&gt; ChannelStockService::Base</span><br><span class="line">[<span class="number">5</span>] pry(ChannelStockService::Base)&gt; self.name.deconstantize</span><br><span class="line">=&gt; <span class="string">"ChannelStockService"</span></span><br><span class="line">[<span class="number">6</span>] pry(ChannelStockService::Base)&gt; self.name.deconstantize.underscore</span><br><span class="line">=&gt; <span class="string">"channel_stock_service"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">1</span>] pry(ChannelStockService::Base) &gt; self</span><br><span class="line">=&gt; ChannelStockService::Base</span><br><span class="line">[<span class="number">2</span>] pry(ChannelStockService::Base)&gt; self.name</span><br><span class="line">=&gt; <span class="string">"ChannelStockService::Base"</span></span><br><span class="line">[<span class="number">3</span>] pry(ChannelStockService::Base)&gt; self.name.deconstantize</span><br><span class="line">=&gt; <span class="string">"ChannelStockService"</span></span><br><span class="line">[<span class="number">4</span>] pry(ChannelStockService::Base)&gt; self.name.constantize</span><br><span class="line">=&gt; ChannelStockService::Base</span><br><span class="line">[<span class="number">5</span>] pry(ChannelStockService::Base)&gt; self.name.deconstantize</span><br><span class="line">=&gt; <span class="string">"ChannelStockService"</span></span><br><span class="line">[<span class="number">6</span>] pry(ChannelStockService::Base)&gt; self.name.deconstantize.underscore</span><br><span class="line">=&gt; <span class="string">"channel_stock_service"</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>safe_constantize vs constantize: safe_constantize =&gt; nil is returned when the name is not in CamelCase or the constant (or part of it) is unknown. constantize =&gt; NameError is raised when the name is not in CamelCase or the constant is unknown.</p>
+<li><p>safe_constantize vs constantize: </p>
+<ul>
+<li>safe_constantize =&gt; nil is returned when the name is not in CamelCase or the constant (or part of it) is unknown.</li>
+<li>constantize =&gt; NameError is raised when the name is not in CamelCase or the constant is unknown.</li>
+</ul>
 </li>
 </ul>
 <h3 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h3><ul>
-<li>控制台打印: console.log(JSON.stringify(data, null, 2))</li>
+<li>控制台打印: <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="built_in">JSON</span>.stringify(data, <span class="literal">null</span>, <span class="number">2</span>))</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 <h3 id="Elastic-Search"><a href="#Elastic-Search" class="headerlink" title="Elastic Search"></a>Elastic Search</h3><ul>
 <li>启动es: elasticsearch -d</li>
 </ul>
 <h3 id="Rabbit-mq"><a href="#Rabbit-mq" class="headerlink" title="Rabbit mq"></a>Rabbit mq</h3><ul>
-<li>清空rabbit消息:<br>sudo /usr/local/opt/rabbitmq/sbin/rabbitmqctl stop_app<br>sudo /usr/local/opt/rabbitmq/sbin/rabbitmqctl reset<br>sudo /usr/local/opt/rabbitmq/sbin/rabbitmqctl start_app</li>
-<li>在每次修改 rabbitmq_setup.rake文件后部署之后需要执行rake mq:setup_bindings进行绑定queue和routing_key</li>
+<li><p>清空rabbit消息:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo /usr/local/opt/rabbitmq/sbin/rabbitmqctl stop_app</span><br><span class="line">sudo /usr/local/opt/rabbitmq/sbin/rabbitmqctl reset</span><br><span class="line">sudo /usr/local/opt/rabbitmq/sbin/rabbitmqctl start_app</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在每次修改 rabbitmq_setup.rake文件后部署之后需要执行rake mq:setup_bindings进行绑定queue和routing_key</p>
+</li>
 </ul>
 <h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3><ul>
 <li>当Ruby 某个线程处于 IO Block 状态时，其它的线程还可以继续执行。但由于存在 Ruby GIL (Global Interpreter Lock)，MRI Ruby 并不能真正利用多线程进行并行计算。JRuby 去除了 GIL，是真正意义的多线程，既能应付 IO Block，也能充分利用多核 CPU 加快整体运算速度。</li>
 <li>重启nginx  kill -HUP pid<br>从容地重启nginx，我们一般用这个信号来重启nginx，或重新加载配置，因为是从容地重启，因此服务是不中断的<br>./nginx -s reload，就是来重启nginx，./nginx -s stop，就是来停止nginx的运行 新的nginx进程在解析到reload参数后，就知道我们的目的是控制nginx来重新加载配置文件了，它会向master进程发送信号，然后接下来的动作，就和我们直接向master进程发送信号一样了</li>
 <li>begin rescue end 整个算一个作用域，在begin rescue中间定义的变量，rescue end之间可用</li>
-<li></li>
+<li>ret = JSON.parse(string) 之后取东西都要 ret[‘data’] 用”” 或者 ‘’取 不能用symbol来取，实际写代码时多注意JSON与Hash的区别</li>
 </ul>
 
       
@@ -458,7 +491,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 John Doe
+    		&copy; 2018 Perky
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -589,27 +622,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
+              <a href="https://huyansheng3.github.io/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
             </li>
           
         </ul>
@@ -620,7 +633,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">94年&lt;br&gt;&lt;br&gt;年轻的小菜鸡&lt;br&gt;皮的不行的搬砖的&lt;br&gt;现在北京</div>
   	  	
     	</section>
     
