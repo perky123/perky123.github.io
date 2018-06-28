@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Hexo</title>
+  <title>日常命令/知识点积累 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="测试 测试单个用例: rake test TEST=test/unit/ 复制development 数据表到test: db:test:clone_structureRedis in Rails(Gem redis-rails)  配置12345# config/application.rbconfig.cache_store = :redis_store, &quot;redis://localhost">
+<meta property="og:type" content="article">
+<meta property="og:title" content="日常命令&#x2F;知识点积累">
+<meta property="og:url" content="http://yoursite.com/2018/06/28/日常命令-知识点积累/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="测试 测试单个用例: rake test TEST=test/unit/ 复制development 数据表到test: db:test:clone_structureRedis in Rails(Gem redis-rails)  配置12345# config/application.rbconfig.cache_store = :redis_store, &quot;redis://localhost">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-06-28T06:21:55.708Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="日常命令&#x2F;知识点积累">
+<meta name="twitter:description" content="测试 测试单个用例: rake test TEST=test/unit/ 复制development 数据表到test: db:test:clone_structureRedis in Rails(Gem redis-rails)  配置12345# config/application.rbconfig.cache_store = :redis_store, &quot;redis://localhost">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,103 +154,222 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-日常命令-知识点积累" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      日常命令/知识点积累
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/28/日常命令-知识点积累/" class="archive-article-date">
+
+        
+        <a href="/2018/06/28/日常命令-知识点积累/" class="archive-article-date">
   	<time datetime="2018-06-28T02:47:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-28</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/28/日常命令-知识点积累/">日常命令/知识点积累</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><ul>
+<li>测试单个用例: rake test TEST=test/unit/</li>
+<li>复制development 数据表到test: db:test:clone_structure<h3 id="Redis-in-Rails-Gem-redis-rails"><a href="#Redis-in-Rails-Gem-redis-rails" class="headerlink" title="Redis in Rails(Gem redis-rails)"></a>Redis in Rails(Gem redis-rails)</h3></li>
+</ul>
+<h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># config/application.rb</span><br><span class="line">config.cache_store = :redis_store, <span class="string">"redis://localhost:6379/0/cache"</span>, &#123; <span class="attr">expires_in</span>: <span class="number">90.</span>minutes &#125;</span><br><span class="line"></span><br><span class="line"># config/initializers/session_store.rb</span><br><span class="line">MyApplication::Application.config.session_store :redis_store, <span class="attr">servers</span>: [<span class="string">"redis://localhost:6379/0/session"</span>]</span><br></pre></td></tr></table></figure>
+<h4 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h4><ul>
+<li><p>Redis Hash $redis.hset(‘user_city’, user_id, city_id)  $redis.hgetall(‘user_city’)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; $redis.hset(<span class="string">'user_city'</span>, <span class="number">1</span>, <span class="number">10</span>)</span><br><span class="line">=&gt; <span class="literal">true</span></span><br><span class="line">&gt; $redis.hset(<span class="string">'user_city'</span>, <span class="number">2</span>, <span class="number">20</span>)</span><br><span class="line">=&gt; <span class="literal">true</span></span><br><span class="line">&gt; $redis.hgetall(<span class="string">'user_city'</span>)</span><br><span class="line">=&gt; &#123;<span class="string">"1"</span>=&gt;<span class="string">"10"</span>, <span class="string">"2"</span>=&gt;<span class="string">"20"</span>&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Redis Set</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; $redis.set(<span class="string">'name'</span>, <span class="string">'Obama'</span>)</span><br><span class="line">=&gt; <span class="literal">true</span></span><br><span class="line">&gt; $redis.get(<span class="string">'name'</span>)</span><br><span class="line">=&gt; <span class="string">"Obama"</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h4><ul>
+<li>启动redis: redis-server</li>
+<li>测试连接是否正常: redis-cli</li>
+</ul>
+<h3 id="Mac系统命令"><a href="#Mac系统命令" class="headerlink" title="Mac系统命令"></a>Mac系统命令</h3><ul>
+<li>查看出口ip: curl ifconfig.me</li>
+<li>查看端口占用情况: lsof -i :端口号</li>
+<li>远程复制到本地:<br>scp <a href="mailto:root@10.6.159.147" target="_blank" rel="noopener">root@10.6.159.147</a>:/opt/soft/demo.tar /opt/soft/<br>scp deploy@r6:/tmp/20171024_image_collection.xls /tmp/</li>
+<li>本地复制到远程:<br>scp local_file remote_username@remote_ip:remote_folder</li>
+<li>后台任务(nohup):<br>RAILS_ENV=production bundle exec nohup rake push_ctrip_special:price &amp;</li>
+</ul>
+<h3 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h3><ul>
+<li>查看docker下所有容器: docker ps -a</li>
+<li>查看容器日志: docker logs -f container_id</li>
+<li>查看实时日志: docker logs -f -t –since=”2018-06-28” <container id=""></container></li>
+<li>查看端口绑定情况: docker port adoring_stonebraker 5002</li>
+<li>docker run -d -p 127.0.0.1:5001:5002/udp training/webapp python app.py  我们就可以通过访问127.0.0.1:5001来访问容器的5002的udp端口</li>
+<li>登陆docker容器: docker exec -it <container id=""> bash</container></li>
+<li>docker访问终端: docker exec -it 47d08ed9c458 bundle exec rails c</li>
+<li>docker容器内拷贝至容器外: docker cp <container id="">:/tmp/excel/416185/newcities.xlsx /tmp/</container></li>
+</ul>
+<h3 id="Mysql"><a href="#Mysql" class="headerlink" title="Mysql"></a>Mysql</h3><ul>
+<li>导出数据库表及数据: mysqldump -uroot -pperky123  user_center_development &gt; ~/Desktop/user_center_development.sql</li>
+</ul>
+<h3 id="Ruby"><a href="#Ruby" class="headerlink" title="Ruby"></a>Ruby</h3><ul>
+<li>try(:a) == &amp;:a</li>
+</ul>
+<h3 id="Rails"><a href="#Rails" class="headerlink" title="Rails"></a>Rails</h3><ul>
+<li>部署时编译静态文件: bundle exec cap alpha deploy compile=true</li>
+<li><p>查看方法定义位置:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; m = User.method(:last)</span><br><span class="line"> =&gt; #&lt;Method: Class(ActiveRecord::Querying)#last&gt;</span><br><span class="line">&gt; m.source_location</span><br><span class="line"> =&gt; [<span class="string">"/opt/work/batman/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.2/lib/active_record/querying.rb"</span>, <span class="number">3</span>]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>string转class,class取module，class转string…</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">self</span><br><span class="line">=&gt; ChannelStockService::Base</span><br><span class="line">[<span class="number">2</span>] pry(ChannelStockService::Base)&gt; self.name</span><br><span class="line">=&gt; <span class="string">"ChannelStockService::Base"</span></span><br><span class="line">[<span class="number">3</span>] pry(ChannelStockService::Base)&gt; self.name.deconstantize</span><br><span class="line">=&gt; <span class="string">"ChannelStockService"</span></span><br><span class="line">[<span class="number">4</span>] pry(ChannelStockService::Base)&gt; self.name.constantize</span><br><span class="line">=&gt; ChannelStockService::Base</span><br><span class="line">[<span class="number">5</span>] pry(ChannelStockService::Base)&gt; self.name.deconstantize</span><br><span class="line">=&gt; <span class="string">"ChannelStockService"</span></span><br><span class="line">[<span class="number">6</span>] pry(ChannelStockService::Base)&gt; self.name.deconstantize.underscore</span><br><span class="line">=&gt; <span class="string">"channel_stock_service"</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>safe_constantize vs constantize: safe_constantize =&gt; nil is returned when the name is not in CamelCase or the constant (or part of it) is unknown. constantize =&gt; NameError is raised when the name is not in CamelCase or the constant is unknown.</p>
+</li>
+</ul>
+<h3 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h3><ul>
+<li>控制台打印: console.log(JSON.stringify(data, null, 2))</li>
+</ul>
+<h3 id="Elastic-Search"><a href="#Elastic-Search" class="headerlink" title="Elastic Search"></a>Elastic Search</h3><ul>
+<li>启动es: elasticsearch -d</li>
+</ul>
+<h3 id="Rabbit-mq"><a href="#Rabbit-mq" class="headerlink" title="Rabbit mq"></a>Rabbit mq</h3><ul>
+<li>清空rabbit消息:<br>sudo /usr/local/opt/rabbitmq/sbin/rabbitmqctl stop_app<br>sudo /usr/local/opt/rabbitmq/sbin/rabbitmqctl reset<br>sudo /usr/local/opt/rabbitmq/sbin/rabbitmqctl start_app</li>
+<li>在每次修改 rabbitmq_setup.rake文件后部署之后需要执行rake mq:setup_bindings进行绑定queue和routing_key</li>
+</ul>
+<h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3><ul>
+<li>当Ruby 某个线程处于 IO Block 状态时，其它的线程还可以继续执行。但由于存在 Ruby GIL (Global Interpreter Lock)，MRI Ruby 并不能真正利用多线程进行并行计算。JRuby 去除了 GIL，是真正意义的多线程，既能应付 IO Block，也能充分利用多核 CPU 加快整体运算速度。</li>
+<li>重启nginx  kill -HUP pid<br>从容地重启nginx，我们一般用这个信号来重启nginx，或重新加载配置，因为是从容地重启，因此服务是不中断的<br>./nginx -s reload，就是来重启nginx，./nginx -s stop，就是来停止nginx的运行 新的nginx进程在解析到reload参数后，就知道我们的目的是控制nginx来重新加载配置文件了，它会向master进程发送信号，然后接下来的动作，就和我们直接向master进程发送信号一样了</li>
+<li>begin rescue end 整个算一个作用域，在begin rescue中间定义的变量，rescue end之间可用</li>
+<li></li>
+</ul>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/06/28/日常命令-知识点积累/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/26/使用omniauth建立第三方登陆授权Gem/" class="archive-article-date">
-  	<time datetime="2018-06-26T03:57:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-26</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/06/26/使用omniauth建立第三方登陆授权Gem/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用omniauth建立第三方登陆授权Gem </div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/26/使用omniauth建立第三方登陆授权Gem/">使用omniauth建立第三方登陆授权Gem </a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/26/hello-world/" class="archive-article-date">
-  	<time datetime="2018-06-26T03:51:14.361Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/26/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -269,8 +392,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
